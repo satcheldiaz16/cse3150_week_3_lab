@@ -34,8 +34,8 @@ double average(const double values[], int size) {
 	}
 	else{
 		double sum = 0;
-		for(double d: values){
-			sum+=d;
+		for(int i = 0; i < size; i++){
+			sum+=values[i];
 		}
 		return sum/size;
 	}
@@ -49,9 +49,9 @@ double minValue(const double values[], int size) {
 	}
 	else{
 		double min = values[0];
-		for(double d: values){
-			if(d < min){
-				min = d;
+		for(int i=0; i<size; i++){
+			if(values[i] < min){
+				min = values[i];
 			}
 		}
 		return min;
@@ -66,9 +66,9 @@ double maxValue(const double values[], int size) {
 	}
 	else{
 		double max = values[0];
-		for(double d: values){
-			if(d > max){
-				max = d;
+		for(int i = 0; i < size; i++){
+			if(values[i] > max){
+				max = values[i];
 			}
 		}
 		return max;
