@@ -8,7 +8,7 @@ void addReading(const std::string& label, double value,
                 std::string labels[], double values[],
                 int& size, int capacity) {
 	if(size == capacity){
-		throw "Full";
+		throw std::string("Full");
 	} else {
 		labels[size] = label;
 		values[size] = value;
@@ -30,7 +30,7 @@ void printReading(const std::string& label, const double& value) {
 double average(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute average
     	if(size==0){
-		throw "Empty";
+		throw std::string("Empty");
 	}
 	else{
 		double sum = 0;
@@ -45,7 +45,7 @@ double average(const double values[], int size) {
 double minValue(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute min
     	if(size==0){
-		throw "Empty";
+		throw std::string("Empty");
 	}
 	else{
 		double min = values[0];
@@ -62,7 +62,7 @@ double minValue(const double values[], int size) {
 double maxValue(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute max
     	if(size==0){
-		throw "Empty";
+		throw std::string("Empty");
 	}
 	else{
 		double max = values[0];
